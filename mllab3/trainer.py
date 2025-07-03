@@ -104,8 +104,75 @@ if __name__ == '__main__':
     for config in configs:
         model = FullyConnectedModel(**config).to('cuda')
         print('MNIST dataset')
-        print(f'количество слоев {len(config["layers"])/2}')
+        print(f'количество слоев {int(len(config["layers"])/2)}')
         train_dl, test_dl = get_mnist_loaders(batch_size=512)
         history = train_model(model,train_dl, test_dl,epochs=10, lr=0.001, device='cuda')
         plot_training_history(history)
+
+#вывод: с увелечением слоев растет время, так же увеличиваются потери, переобучение в моем случае не было
+'''MNIST dataset
+количество слоев 7
+Epoch 5/10:
+Train Loss: 0.7723, Train Acc: 0.9544
+Test Loss: 0.7109, Test Acc: 0.9553
+Compare Acc: -0.0009
+--------------------------------------------------
+Epoch 10/10:
+Train Loss: 0.2983, Train Acc: 0.9822
+Test Loss: 0.3074, Test Acc: 0.9725
+Compare Acc: 0.0097
+--------------------------------------------------
+123.84782099723816
+MNIST dataset
+количество слоев 5
+Epoch 5/10:
+Train Loss: 0.5665, Train Acc: 0.9705
+Test Loss: 0.5169, Test Acc: 0.9681
+Compare Acc: 0.0024
+--------------------------------------------------
+Epoch 10/10:
+Train Loss: 0.2178, Train Acc: 0.9871
+Test Loss: 0.2407, Test Acc: 0.9750
+Compare Acc: 0.0121
+--------------------------------------------------
+117.82853078842163
+MNIST dataset
+количество слоев 3
+Epoch 5/10:
+Train Loss: 0.6523, Train Acc: 0.9670
+Test Loss: 0.6018, Test Acc: 0.9666
+Compare Acc: 0.0004
+--------------------------------------------------
+Epoch 10/10:
+Train Loss: 0.2549, Train Acc: 0.9891
+Test Loss: 0.2732, Test Acc: 0.9751
+Compare Acc: 0.0140
+--------------------------------------------------
+117.21886563301086
+MNIST dataset
+количество слоев 2
+Epoch 5/10:
+Train Loss: 0.5038, Train Acc: 0.9719
+Test Loss: 0.4609, Test Acc: 0.9685
+Compare Acc: 0.0034
+--------------------------------------------------
+Epoch 10/10:
+Train Loss: 0.1756, Train Acc: 0.9896
+Test Loss: 0.1975, Test Acc: 0.9776
+Compare Acc: 0.0120
+--------------------------------------------------
+118.5144259929657
+MNIST dataset
+количество слоев 1
+Epoch 5/10:
+Train Loss: 0.1361, Train Acc: 0.9618
+Test Loss: 0.1363, Test Acc: 0.9616
+Compare Acc: 0.0002
+--------------------------------------------------
+Epoch 10/10:
+Train Loss: 0.0629, Train Acc: 0.9841
+Test Loss: 0.0865, Test Acc: 0.9742
+Compare Acc: -0.0099
+--------------------------------------------------
+117.01189398765564'''
 
