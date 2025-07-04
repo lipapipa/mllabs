@@ -1,5 +1,6 @@
 #1.1 
 Проверяем как влияют слои на обучение и его параметры,учимся создавать много слоев
+
 7слоев ![image](https://github.com/user-attachments/assets/7c90810a-b885-414f-884d-a2ae07c1e02f) 
 5 слоев ![image](https://github.com/user-attachments/assets/a9e297f1-b06c-4697-a353-8228c7eff1f0)
 3 слоя  ![image](https://github.com/user-attachments/assets/fd791e6e-f389-45e2-8aba-d1dab1da2afa) 
@@ -13,7 +14,7 @@
 
 
 
-#2.2 ![image](https://github.com/user-attachments/assets/31f2438d-dbe7-4062-a2d4-c7a07968ced9)\
+#2.2 Сравнение моделей разной ширины, сравниваем точность предсказаний,![image](https://github.com/user-attachments/assets/31f2438d-dbe7-4062-a2d4-c7a07968ced9)\
 
 #3.1 без регуляризации ![image](https://github.com/user-attachments/assets/15760412-3593-4afc-a92b-dbb7ae189352)
 распреденеие весов без регуляризации ![image](https://github.com/user-attachments/assets/9e479188-1bd1-435d-9067-421667a96e6b)
