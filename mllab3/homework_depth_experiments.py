@@ -90,7 +90,7 @@ if __name__ == '__main__':
         {"type": "relu"},{"type": "linear", "size": 128},{"type": "relu"},{"type": "linear", "size": 64}, {"type": "relu"},{"type": "linear", "size": 10},       #5с лоев
         {"type": "sigmoid"}]},
         
-        {"input_size": 784,"num_classes": 10,"layers": [ {"type": "linear", "size": 512},{"type": "relu"}, {"type": "batch_norm"},{"type": "dropout", "rate": 0.2} ,
+        {"input_size": 784,"num_classes": 10,"layers": [ {"type": "linear", "size": 512}, {"type": "batch_norm"},{"type": "relu"},{"type": "dropout", "rate": 0.2} ,
         {"type": "linear", "size": 64},       # 3 слоя + Dropout + BatchNorm
         {"type": "relu"},{"type": "linear", "size": 10}, {"type": "sigmoid"}]},
 
@@ -116,5 +116,11 @@ if __name__ == '__main__':
         print('MNIST dataset')
         train_dl, test_dl = get_mnist_loaders(batch_size=512)
         mnist_history = train_model(model,train_dl, test_dl,epochs=10, lr=0.001, device='cuda')
+
+'''  
+BatchNorm значительно ускорил обучение и сделал его более стабильным.
+Dropout (0.2) уменьшил переобучение и повысил точность на тесте.
+Переобучения не было так как batchNorm b Dropout боряться с ним
+'''
      
 
