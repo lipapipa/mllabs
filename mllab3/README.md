@@ -6,6 +6,7 @@
 1 слой ![image](https://github.com/user-attachments/assets/d3bf259e-3a44-47dc-a4b6-4d8aff9cf20d) 
 
 
+#2.2 ![image](https://github.com/user-attachments/assets/31f2438d-dbe7-4062-a2d4-c7a07968ced9)
 
 
 
