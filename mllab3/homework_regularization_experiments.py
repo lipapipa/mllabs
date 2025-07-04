@@ -198,3 +198,64 @@ if __name__ == '__main__':
     plt.legend()
     plt.grid(True)
     plt.show()
+
+
+
+
+'''=== Training model with: No regularization ===
+Epoch 5/5:
+Train Loss: 0.0635, Train Acc: 0.9801
+Test Loss: 0.0859, Test Acc: 0.9745
+Gap: 0.0056
+--------------------------------------------------
+Training time: 61.62 seconds
+
+=== Training model with: Dropout (rate=0.1) ===
+Epoch 5/5:
+Train Loss: 0.0771, Train Acc: 0.9769
+Test Loss: 0.0721, Test Acc: 0.9792
+Gap: -0.0023
+--------------------------------------------------
+Training time: 62.61 seconds
+
+=== Training model with: Dropout (rate=0.3) ===
+Epoch 5/5:
+Train Loss: 0.1114, Train Acc: 0.9701
+Test Loss: 0.0916, Test Acc: 0.9744
+Gap: -0.0043
+--------------------------------------------------
+Training time: 62.90 seconds
+
+=== Training model with: Dropout (rate=0.5) ===
+Epoch 5/5:
+Train Loss: 0.1999, Train Acc: 0.9525
+Test Loss: 0.1110, Test Acc: 0.9713
+Gap: -0.0188
+--------------------------------------------------
+Training time: 62.24 seconds
+
+=== Training model with: BatchNorm only ===
+Epoch 5/5:
+Train Loss: 0.0544, Train Acc: 0.9929
+Test Loss: 0.0855, Test Acc: 0.9803
+Gap: 0.0126
+--------------------------------------------------
+Training time: 62.73 seconds
+
+=== Training model with: Dropout + BatchNorm ===
+Epoch 5/5:
+Train Loss: 0.1393, Train Acc: 0.9725
+Test Loss: 0.0914, Test Acc: 0.9772
+Gap: -0.0047
+--------------------------------------------------
+Training time: 64.69 seconds
+
+=== Training model with: L2 regularization (weight decay) ===
+Epoch 5/5:
+Train Loss: 0.0723, Train Acc: 0.9784
+Test Loss: 0.0887, Test Acc: 0.9747
+Gap: 0.0037
+--------------------------------------------------
+Training time: 61.37 seconds
+
+'''
