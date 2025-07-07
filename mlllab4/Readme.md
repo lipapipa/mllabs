@@ -1,4 +1,4 @@
-Задание 1: Сравнение CNN и полносвязных сетей (40 баллов)
+![image](https://github.com/user-attachments/assets/d9127425-681b-4ae9-a29f-534cb5188698)Задание 1: Сравнение CNN и полносвязных сетей (40 баллов)
 Создайте файл homework_cnn_vs_fc_comparison.py:
 
 1.1 Сравнение на MNIST (20 баллов)
@@ -74,6 +74,60 @@ Test Loss: 1.3972, Test Acc: 0.5084
 ![image](https://github.com/user-attachments/assets/c6c65688-e56c-4b76-b811-88b5d2142a6f)
 ![image](https://github.com/user-attachments/assets/a4cf8f93-5e40-40bb-a7c7-e24b61857927)
 ![image](https://github.com/user-attachments/assets/cdf2b0a0-b7ca-44bc-b3a1-e39e19788964)
+
+2.1 Влияние размера ядра свертки (15 баллов)
+ Исследуйте влияние размера ядра свертки:
+ - 3x3 ядра
+ - 5x5 ядра
+ - 7x7 ядра
+ - Комбинация разных размеров (1x1 + 3x3)
+ 
+ Для каждого варианта:
+- Поддерживайте одинаковое количество параметров
+ - Сравните точность и время обучения
+- Проанализируйте рецептивные поля
+ - Визуализируйте активации первого слоя
+
+   3x3 ![image](https://github.com/user-attachments/assets/9904694f-64be-4f57-bb99-f3ac4a759941)
+   5x5 ![image](https://github.com/user-attachments/assets/214c182e-79b5-4d87-b7e7-4587304d8b78)
+   7x7 ![image](https://github.com/user-attachments/assets/29a83b20-ac3e-429e-9fc8-f831a5b7b562)
+   - Комбинация разных размеров (1x1 + 3x3) ![image](https://github.com/user-attachments/assets/ddec6e14-a571-4d6a-a350-bcab7466e6c3)
+   - Проблем по обучению не выявлено,переобучения нет, комбинация разных размеров показала худший результат из всех ,но все равно результат отличный
+
+     ![image](https://github.com/user-attachments/assets/647c39b0-319a-46b3-9ec8-e840ffaca3d7)
+
+     2.2 Влияние глубины CNN (15 баллов)
+ Исследуйте влияние глубины CNN:
+ - Неглубокая CNN (2 conv слоя)
+ - Средняя CNN (4 conv слоя)
+ - Глубокая CNN (6+ conv слоев)
+ - CNN с Residual связями
+ 
+ Для каждого варианта:
+ - Сравните точность и время обучения
+ - Проанализируйте vanishing/exploding gradients
+ - Исследуйте эффективность Residual связей
+ - Визуализируйте feature maps
+
+   Создали 4 новых класса и обучили
+   ![image](https://github.com/user-attachments/assets/4fb5743e-abdc-473c-a8aa-91da00a511ea)
+   ![image](https://github.com/user-attachments/assets/18a02035-1a8d-4f2f-9acb-7ff98b9dbf2f)
+   Градиенты в норме, все слои участвуют в обучении.Это Значит что CNN С RESIDUAL решают проблему с потухновением градиентов
+   ![image](https://github.com/user-attachments/assets/1d506027-d48d-4654-ab6d-ea0634d04e54)
+   ![image](https://github.com/user-attachments/assets/a679cec3-7d75-4f0d-8ee2-c513b0a252e8)
+    Модель страдает от исчезающих градиентов
+   ![image](https://github.com/user-attachments/assets/022762c5-8763-4b0f-a66a-3a57d62ac1cf)
+   ![image](https://github.com/user-attachments/assets/37347e93-7e43-4c98-9d08-2cc29be66166)
+   Сеть страдает от исчезающих градиентов, что резко снижает её обучаемость.
+   
+
+
+
+
+
+
+
+
 
 
 
